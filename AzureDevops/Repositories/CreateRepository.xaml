@@ -91,16 +91,8 @@
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Create Repository" sap:VirtualizedContainerService.HintSize="467.2,940.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="Organisation">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">TestOrganisation</Literal>
-        </Variable.Default>
-      </Variable>
-      <Variable x:TypeArguments="x:String" Name="NewRepositoryTemplate">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">~\Templates\new_repository_template.json</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="TestOrganisation" Name="Organisation" />
+      <Variable x:TypeArguments="x:String" Default="~\Templates\new_repository_template.json" Name="NewRepositoryTemplate" />
       <Variable x:TypeArguments="x:String" Name="NewRepositoryText" />
       <Variable x:TypeArguments="x:String" Default="[&quot;https://dev.azure.com/&quot; + Organisation + &quot;/&quot; + ProjectID + &quot;/_apis/git/repositories?api-version=6.0&quot;]" Name="NewRepositoryURL" />
     </Sequence.Variables>
@@ -147,7 +139,11 @@
     </Sequence>
     <Sequence DisplayName="Send Create Repository Request" sap:VirtualizedContainerService.HintSize="425.6,317.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
       <Sequence.Variables>
-        <Variable x:TypeArguments="x:String" Default="rwpdcji5lflviwdfchxzlghnpfqvaizqz42s22xyaponktr3dvoq" Name="PersonalAccessToken" />
+        <Variable x:TypeArguments="x:String" Name="PersonalAccessToken">
+          <Variable.Default>
+            <Literal x:TypeArguments="x:String">personalaccesstoken</Literal>
+          </Variable.Default>
+        </Variable>
         <Variable x:TypeArguments="x:String" Name="NewRepositoryResult" />
         <Variable x:TypeArguments="x:Int32" Name="NewRepositoryStatusCode" />
         <Variable x:TypeArguments="njl:JObject" Name="NewRepositoryResultJson" />
