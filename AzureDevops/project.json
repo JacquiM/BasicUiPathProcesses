@@ -1,0 +1,50 @@
+{
+  "name": "AzureDevops",
+  "description": "This library executes basic Azure Devops Tasks",
+  "main": "NewActivity.xaml",
+  "dependencies": {
+    "Job_Telemertry": "1.0.9",
+    "ReadConfigFromSQL": "1.0.6",
+    "UiPath.Excel.Activities": "2.10.3-preview",
+    "UiPath.Mail.Activities": "1.10.3-preview",
+    "UiPath.System.Activities": "21.4.0-preview",
+    "UiPath.UIAutomation.Activities": "21.4.1-preview",
+    "UiPath.WebAPI.Activities": "1.7.0"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "21.4.0.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "isPausable": true,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Library",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Legacy"
+}
