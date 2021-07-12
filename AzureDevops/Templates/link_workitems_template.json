@@ -1,0 +1,24 @@
+[
+	{
+		"op": "test",
+		"path": "/rev",
+		"value": 1
+	},
+	{
+		"op": "add",
+		"path": "/relations/-",
+		"value": {
+			"rel": "System.LinkTypes.Hierarchy-Reverse",
+			"url": "https://dev.azure.com/<organisation>/_apis/wit/workItems/<story_id>",
+			"attributes": {
+				"comment": "<comment>"
+			}
+		}
+	},
+	{
+		"op": "add",
+		"path": "/fields/System.State",
+		"from": null,
+		"value": "<story_state>"
+	}
+]
